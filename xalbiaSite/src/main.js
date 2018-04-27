@@ -3,6 +3,17 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import BootstrapVue from 'bootstrap-vue'
+import LoadScript from 'vue-plugin-load-script'
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon'
+import VueFire from 'vuefire'
+
+Vue.use(BootstrapVue)
+Vue.use(LoadScript)
+Vue.use(VueFire)
+Vue.component('icon', Icon)
 
 Vue.config.productionTip = false
 
