@@ -1,27 +1,30 @@
 <template>
   <div class="container">
+    <h2> Stream Schedule </h2>
 
+    <div class="jumbotron">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Day</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="(schedule, index) in schedules" :key="index">
+          <td>{{ schedule.day }}</td>
+          <td>{{ schedule.start }}</td>
+          <td>{{ schedule.end }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 
 <script>
-// const firebase = require("firebase/app")
-// require("firebase/database")
-
-// let config = {
-// apiKey: 'AIzaSyAwWKXbz0KXfWDCAcuFKDu3SwkAHru1Vig',
-// authDomain: 'xalbia-7e612.firebaseapp.com',
-// databaseURL: 'https://xalbia-7e612.firebaseio.com',
-// projectId: 'xalbia-7e612',
-// storageBucket: 'xalbia-7e612.appspot.com',
-// messagingSenderId: '161776545195'
-// }
-
-// let app = firebase.initializeApp(config)
-
-// let db = app.database()
-
-// let scheduleRef = db.ref('schedule')
+import { scheduleRef } from '../Firebase.js'
 
 export default {
   name: 'schedule',
@@ -31,7 +34,7 @@ export default {
     }
   },
   firebase: {
-    // schedules: scheduleRef
+    schedules: scheduleRef
   }
 }
 </script>

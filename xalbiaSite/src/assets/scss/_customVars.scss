@@ -58,3 +58,34 @@ $dark: #000000;
     font-size: 22px;
   }
 }
+
+
+// this is for the stream page
+
+.player{
+  margin-top: 20px;
+  height: 300px;
+
+  @include mq(tablet){
+    height: 400px;
+  }
+
+  @include mq(desktop){
+    height: 650px;
+  }
+}
+
+// this is for the contact page
+
+.card-columns {
+  column-count: 1 !important;
+
+  @include mq(desktop){
+    column-count: 2 !important;
+  }
+}
+
+.btn-group{
+  background-color: $secondary !important;
+  margin-top: 10px;
+}

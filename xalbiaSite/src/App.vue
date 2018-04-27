@@ -7,7 +7,6 @@
 
 <script>
 import Navbar from './components/Navbar.vue'
-
 export default {
   name: 'App',
   components: {
@@ -17,13 +16,16 @@ export default {
 </script>
 
 <style lang="scss" rel="stylesheet/scss">
-@import './assets/scss/app.scss';
+  @import './assets/scss/app.scss';
 
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  background-color: $primary;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+  }
+
+  body{
+    background-color: $primary;
+  }
 </style>

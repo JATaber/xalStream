@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h2>Contact</h2>
 
     <b-container fluid>
       <b-card-group columns>
