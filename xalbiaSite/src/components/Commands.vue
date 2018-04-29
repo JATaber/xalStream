@@ -7,7 +7,7 @@
 import { celebRef, themeRef, warnRef, songRef, soundRef } from '../Firebase'
 
 export default {
-  name: 'schedule',
+  name: 'commands',
   data () {
     return {
       themes: {},
