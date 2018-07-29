@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>Contact</h2>
+    <h2 class="header">Contact</h2>
 
     <b-container fluid>
       <b-card-group columns>
@@ -34,6 +34,18 @@
                             placeholder="Enter Name">
               </b-form-input>
             </b-form-group>
+            <b-form-group id="subject"
+                          horizontal
+                          label="Subject:"
+                          description="What is your message about?"
+                          label-for="nameInput">
+              <b-form-input id="nameInput"
+                            type="text"
+                            v-model="form.subject"
+                            :state="!$v.form.subject.$invalid"
+                            placeholder="Enter Subject">
+              </b-form-input>
+            </b-form-group>
             <b-form-textarea id="textArea"
                              v-model="form.comment"
                              placeholder="Please type your comment or question here."
@@ -53,7 +65,7 @@
     </b-container>
     <b-modal id="formSub" ref="formSub" hide-footer centered title="Thank You!">
       <div class="d-block text-center">
-        <h3>We will get back to you as soon as we can!</h3>
+        <h3>I will get back to you as soon as I can!</h3>
       </div>
       <b-btn class="mt-3" variant="primary" block @click="hide">OK</b-btn>
     </b-modal>
@@ -85,6 +97,10 @@ export default {
         required,
         minLength: minLength(3)
       },
+      subject: {
+        required,
+        minLength: minLength(3)
+      },
       email: {
         required,
         email
@@ -98,18 +114,25 @@ export default {
     onReset (evt) {
       this.form.email = ''
       this.form.name = ''
+      this.form.subject = ''
       this.form.comment = ''
       this.show = false
       this.$nextTick(() => { this.show = true })
     },
     onSubmit (evt) {
       evt.preventDefault()
+      window.emailjs.send(
+        'gmail',
+        'stream',
+        {email: this.form.email, name: this.form.name, subject: this.form.subject, text: this.form.comment}
+      )
       this.$refs.formSub.show()
     },
     hide () {
       this.$refs.formSub.hide()
       this.form.email = ''
       this.form.name = ''
+      this.form.subject = ''
       this.form.comment = ''
     }
   }

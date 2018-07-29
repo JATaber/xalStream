@@ -1,9 +1,9 @@
 <template>
-  <div class="container">
-    <h2> Stream Schedule </h2>
+  <div class="container schedule">
 
     <div class="jumbotron">
-      <table class="table table-striped">
+      <h2> Stream Schedule </h2>
+      <table class="table">
         <thead>
         <tr>
           <th>Day</th>

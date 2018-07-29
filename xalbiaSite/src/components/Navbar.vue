@@ -12,6 +12,7 @@
             <b-nav-item id="item" :class="{ 'active': $route.path == '/commands' }" href="/commands">Commands</b-nav-item>
             <b-nav-item id="item" :class="{ 'active': $route.path == '/contact' }" href="/contact">Contact</b-nav-item>
             <b-nav-item id="item" :class="{ 'active': $route.path == '/stream' }" href="/stream">Stream</b-nav-item>
+            <b-nav-item id="item" href="https://www.jamestaber.info" target="_blank">Portfolio Site</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>

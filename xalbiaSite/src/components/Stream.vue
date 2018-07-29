@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>Stream</h2>
+    <h2 class="header">Stream</h2>
     <twitch-player class="player" width="100%" height="100%"
                    :channel="channel"
     ></twitch-player>

@@ -1,10 +1,10 @@
 <template>
-  <div class="container">
-    <h2>Chat Commands</h2>
-    <div class="jumbotron">
-      <table class="table table-striped">
+  <div class="container commands">
+    <h2 class="header">Chat Commands</h2>
+    <div class="jumbotron themeTable">
+      <h3>Theme Songs</h3>
+      <table class="table">
         <thead>
-        <h3>Theme Songs</h3>
         <tr>
           <th>Command</th>
           <th>Hint</th>
@@ -18,10 +18,10 @@
         </tbody>
       </table>
     </div>
-    <div class="jumbotron">
-      <table class="table table-striped">
+    <div class="jumbotron warnTable">
+      <h3>Warning Sounds</h3>
+      <table class="table">
         <thead>
-        <h3>Warning Sounds</h3>
         <tr>
           <th>Command</th>
           <th>Hint</th>
@@ -35,10 +35,10 @@
         </tbody>
       </table>
     </div>
-    <div class="jumbotron">
-      <table class="table table-striped">
+    <div class="jumbotron songTable">
+      <h3>Songs</h3>
+      <table class="table">
         <thead>
-        <h3>Songs</h3>
         <tr>
           <th>Command</th>
           <th>Hint</th>
@@ -52,10 +52,10 @@
         </tbody>
       </table>
     </div>
-    <div class="jumbotron">
-      <table class="table table-striped">
+    <div class="jumbotron celeTable">
+      <h3>Celebration Sounds</h3>
+      <table class="table">
         <thead>
-        <h3>Celebration Sounds</h3>
         <tr>
           <th>Command</th>
           <th>Hint</th>
@@ -69,10 +69,10 @@
         </tbody>
       </table>
     </div>
-    <div class="jumbotron">
-      <table class="table table-striped">
+    <div class="jumbotron sfxTable">
+      <h3>Sound Effects</h3>
+      <table class="table">
         <thead>
-        <h3>Sound Effects</h3>
         <tr>
           <th>Command</th>
           <th>Hint</th>
